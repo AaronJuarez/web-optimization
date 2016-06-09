@@ -83,11 +83,35 @@ module.exports = function(grunt) {
           ext: '.min.css'
         }]
       }
+    },
+
+    pagespeed: {
+      options: {
+        nokey: true,
+        url: "http://aaronjuarez.github.io/website-optimization/"
+      },
+      prod: {
+        options: {
+          url: "http://aaronjuarez.github.io/website-optimization/",
+          locale: "en_GB",
+          strategy: "desktop",
+          threshold: 80
+        }
+      },
+      paths: {
+        options: {
+          paths: ["/project-2048.html", "/project-webperf.html", "/project-mobile.html", "/pizza.html"],
+          locale: "en_GB",
+          strategy: "desktop",
+          threshold: 80
+        }
+      }
     }
 
   });
 
   grunt.registerTask('images', ['clean', 'responsive_images']);
   grunt.registerTask('default', ['uglify', 'cssmin', 'htmlmin']);
+  grunt.registerTask('speed', ['pagespeed']);
 
 };
