@@ -463,7 +463,7 @@ window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
 //*** Change to global variable
-var pizzasDiv = document.getElementById("randomPizzas");;
+var pizzasDiv = document.getElementById("randomPizzas");
 for (var i = 2; i < 100; i++) {
   pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
@@ -502,7 +502,6 @@ function updatePositions() {
 
   for (var i = 0; i < 5; i++) {
     phase[i] = Math.sin((sclTop / 1250) + (i));
-    console.log(phase[i]);
   }
 
   for (var i = 0, j= 0; i < window.items.length; i++, j++) {
