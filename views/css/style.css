@@ -31,8 +31,11 @@ form {
 
 .mover {
   position: fixed;
-  width: 256px;
+  /*** Css properties added from js*/
+  width: 73.333px;
+  height: 100px;
   z-index: -1;
+  /*Give each element it's own layer*/
   backface-visibility: hidden;
 }
 
