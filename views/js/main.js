@@ -539,26 +539,22 @@ document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
   var h = 73.33;
-  var heigth = 0;
+  var height = 0;
 
   //*** Variable movingPizzas1 out of for loop
   var movingPizzas1 = document.getElementById("movingPizzas1");
 
   var calcNumOfPizzas = function() {
     var xPizzas = (window.innerWidth/2) / h;
-    console.log('xPizzas ' + xPizzas);
     var yPizzas = 0;
     while(height <= window.innerHeight) {
       height += s;
       yPizzas++;
-      console.log('height ' + height);
-      console.log('yPizzas ' + yPizzas);
     }
     return xPizzas * yPizzas;
   };
 
   var numOfPizzas = calcNumOfPizzas();
-  console.log('numOfPizzas ' + numOfPizzas);
 
   for (var i = 0; i < numOfPizzas; i++) {
     var elem = document.createElement('img');
