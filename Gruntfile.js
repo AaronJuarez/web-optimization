@@ -35,9 +35,9 @@ module.exports = function(grunt) {
     uglify: {
       js: {
         files: {
-          'js/perfmatters.min.js': ['js/perfmatters.js'],
-          'js/analytics.min.js': ['js/analytics.js'],
-          'views/js/main.min.js': ['views/js/main.js']
+          'js/dist/perfmatters.min.js': ['js/src/perfmatters.js'],
+          'js/dist/analytics.min.js': ['js/src/analytics.js'],
+          'views/js/dist/main.min.js': ['views/js/src/main.js']
         }
       }
     },
@@ -49,10 +49,10 @@ module.exports = function(grunt) {
           collapseWhitespace: true
         },
         files: {                                   // Dictionary of files
-          'index.html': 'index-uncomp.html',     // 'destination': 'source'
-          'project-2048.html': 'project-2048-uncomp.html',
-          'project-mobile.html': 'project-mobile-uncomp.html',
-          'project-webperf.html': 'project-webperf-uncomp.html'
+          'index.html': 'index-src.html',     // 'destination': 'source'
+          'project-2048.html': 'project-2048-src.html',
+          'project-mobile.html': 'project-mobile-src.html',
+          'project-webperf.html': 'project-webperf-src.html'
         }
       },
       views: {                                       // Another target
@@ -61,7 +61,7 @@ module.exports = function(grunt) {
           collapseWhitespace: true
         },
         files: {
-          'views/pizza.html': 'views/pizza-uncomp.html'
+          'views/pizza.html': 'views/pizza-src.html'
         }
       }
     },
@@ -70,16 +70,16 @@ module.exports = function(grunt) {
       css: {
         files: [{
           expand: true,
-          cwd: 'css',
+          cwd: 'css/src',
           src: ['*.css', '!*.min.css'],
-          dest: 'css',
+          dest: 'css/dist',
           ext: '.min.css'
         },
         {
           expand: true,
-          cwd: 'views/css',
+          cwd: 'views/css/src',
           src: ['*.css', '!*.min.css'],
-          dest: 'views/css',
+          dest: 'views/css/dist',
           ext: '.min.css'
         }]
       }
