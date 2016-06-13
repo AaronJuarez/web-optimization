@@ -1,8 +1,6 @@
 ## Website Performance Optimization portfolio project
 
-Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
-
-To get started, check out the repository and inspect the code.
+### My notes
 
 ### To run
 ---------------------------
@@ -55,6 +53,13 @@ require('load-grunt-tasks')(grunt);
 
 You also need to install either [GraphicsMagick](https://sourceforge.net/projects/graphicsmagick/files/graphicsmagick/) or [Imagemagick](http://www.imagemagick.org/script/binary-releases.php) CLI tools.
 
+
+### Project Instructions
+-----------------------------
+
+Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
+
+To get started, check out the repository and inspect the code.
 
 ### Getting started
 
